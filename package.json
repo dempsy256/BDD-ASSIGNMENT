@@ -1,4 +1,7 @@
 {
+  "scripts": {
+    "test": "cucumber-js"
+  },
   "devDependencies": {
     "@cucumber/cucumber": "^12.7.0",
     "chai": "^6.2.2"

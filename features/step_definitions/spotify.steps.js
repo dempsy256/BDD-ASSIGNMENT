@@ -52,6 +52,10 @@ Then('the playback should start with an AI voiceover greeting the user by name',
   // Assert the audio track type is 'voiceover' and contains the user's name parameter
 });
 
+Then('the DJ should play a curated song based on the user\'s recent listening history', async function () {
+  // Verify the playing track was selected from the user's recent history data
+});
+
 
 
 // --- Offline Downloads ---
@@ -69,4 +73,40 @@ Then('a download progress icon should appear next to each track', async function
 
 Then('the songs should be saved to the device\'s local storage', async function () {
   // Check the local file system or indexedDB for the encrypted audio chunks
+});
+
+Given('the AI DJ is currently playing a set of acoustic songs', async function () {
+  // Load player state with acoustic songs in the currently playing DJ set
+});
+
+When('the user taps the DJ button in the bottom right corner of the player', async function () {
+  // Click the DJ button in the player control panel
+});
+
+Then('the DJ should interrupt the current track', async function () {
+  // Assert current playback stops and DJ audio begins
+});
+
+Then('provide a voiceover explaining a new genre or mood', async function () {
+  // Assert a voiceover track plays with transition explanation
+});
+
+Then('transition into playing songs matching the new vibe', async function () {
+  // Assert the queue updates with songs matching the new genre/mood selection
+});
+
+Given('a user has {string} turned off in settings', async function (settingName) {
+  // Mock the settings state to have the specified toggle disabled
+});
+
+When('the user tries to download a podcast episode while on a 5G\\/4G network', async function () {
+  // Mock network state to cellular and attempt a download action
+});
+
+Then('the download should be queued but paused', async function () {
+  // Assert the download appears in the queue with a 'paused' status
+});
+
+Then('a prompt should notify the user that downloading will resume on Wi-Fi', async function () {
+  // Assert a notification/alert dialog has appeared with the specified message
 });

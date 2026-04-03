@@ -40,12 +40,32 @@ Given('a user has selected a video clip of a person dancing in front of a busy s
   // Load video asset into the editor selection state
 });
 
+Given('a user has imported a video featuring a green screen background', async function () {
+  // Load a video asset with green screen into the editor
+});
+
 When('the user applies the {string} tool', async function (toolName) {
   // Click the background removal function
 });
 
+When('the user applies the {string} \\(Background Removal) tool', async function (toolName) {
+  // Click the Auto Cutout background removal tool
+});
+
 Then('CapCut\'s AI should identify the person', async function () {
   // Wait for the masking API to return a subject outline
+});
+
+When('the user selects {string}, picks the green color with the color picker, and increases the intensity slider', async function (toolName) {
+  // Select Chroma Key tool, use color picker on green, and adjust intensity
+});
+
+Then('all green pixels in the video should become transparent', async function () {
+  // Assert all pixels matching the green color threshold are rendered transparent
+});
+
+Then('the layer beneath the video on the timeline should become visible', async function () {
+  // Assert that child layers below the video layer are now visible/rendered
 });
 
 Then('remove the street background, leaving the background transparent', async function () {
@@ -57,6 +77,14 @@ Then('remove the street background, leaving the background transparent', async f
 // --- Text-to-Speech ---
 Given('a user has added a text layer saying {string} to the timeline', async function (phrase) {
   // Inject a text element into the timeline containing the specific phrase
+});
+
+When('the user selects the text layer and taps {string}', async function (buttonName) {
+  // Select the text layer and click the Text-to-Speech button
+});
+
+Given('a user has already generated an audio clip using Text-to-Speech', async function () {
+  // Load a timeline state with an existing TTS-generated audio clip
 });
 
 When('selects the {string} voice option', async function (voiceType) {
